@@ -1,2 +1,2 @@
 # CPP-Concurrency
-C++ concurrency scratchpad
+https://www.manning.com/books/c-plus-plus-concurrency-in-action
