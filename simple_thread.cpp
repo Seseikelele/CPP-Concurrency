@@ -3,14 +3,16 @@
 
 using namespace std;
 
-// void hello()
-// {
-// 	cout << "Henlo, World!" << endl;
-// }
+void hello()
+{
+	cout << "Hello from the other thread." << endl;
+}
 
 int main()
 {
-	// thread t(hello);
-	thread t([](){cout << "Henlo, World!" << endl;});
-	t.join();
+	cout << "Hello from the main thread." << endl;
+	thread t1(hello);
+	thread t2([](){cout << "Hello from the other other thread." << endl;});
+	t1.join();
+	t2.join();
 }
